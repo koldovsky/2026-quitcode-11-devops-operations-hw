@@ -37,7 +37,7 @@
 - Гілка `staging`: https://github.com/maryan-qc/therapy-scheduling/tree/staging
 - Зміни з `main` у `staging`: https://github.com/maryan-qc/therapy-scheduling/pull/74, https://github.com/maryan-qc/therapy-scheduling/pull/79
 - Змінна лише для гілки `staging`: `APP_ENV` (Vercel: Preview, гілка `staging`) — поле `appEnv` у `/api/health`. На staging там `"staging"`, на проді й інших preview — `null`.
-- Проєкт Supabase для staging: окремий проєкт в іншому акаунті Supabase, регіон eu-west-1.
+- Проєкт Supabase для staging: `therapy-scheduling-staging` — окремий проєкт в іншому акаунті Supabase, регіон eu-west-1.
   - supabaseRef staging: hudgoucpezodnvirccok;
   - supabaseRef проду: azsawyysyqzgjxtlufjk.
 - Міграції в базу staging через CI: прогін https://github.com/maryan-qc/therapy-scheduling/actions/runs/45483522327.
