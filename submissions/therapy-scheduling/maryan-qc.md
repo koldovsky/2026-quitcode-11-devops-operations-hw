@@ -58,6 +58,7 @@
   - У той момент `/api/health` проду показував саме цей SHA. У прогоні smoke проду https://github.com/maryan-qc/therapy-scheduling/actions/runs/45648552772 видно `"sha":"32c03ceb3780f68734b3469cd429385561bb7982"`.
   - Після тегу в `main` злито лише документацію: #78 (зауваження PM до postmortem і runbook), #80 (канал алерту), #81 (знімки). Тому зараз `/api/health` показує SHA вище.
   - Код застосунку той самий, що в `v1.0.0`: https://github.com/maryan-qc/therapy-scheduling/compare/v1.0.0...81f74279eb8950250abdbdd2c30bd30f3176ad03 — змінено лише `docs/`.
+  - Повертати прод на SHA тегу не стали. Тоді `/api/health` не показував би SHA `main` з D0, а щоденний smoke `prod`, який звіряє SHA з `main`, червонів би.
 - Приймання PM перед тегом: https://github.com/maryan-qc/therapy-scheduling/issues/75#issuecomment-7175074613 — «Приймання релізу (…, 2026-11-25): staging …, сценарій ✅»
 
 ### Сигнали (трек B)
@@ -96,7 +97,9 @@
   - Інструменти запису MCP Vercel і Supabase заборонені поіменно.
   - Також заборонені редагування файлів, git-команди запису і читання `.env*`.
   - Постійні правила: https://github.com/maryan-qc/therapy-scheduling/blob/81f74279eb8950250abdbdd2c30bd30f3176ad03/.claude/settings.json
-- MCP-конфіг: https://github.com/maryan-qc/therapy-scheduling/blob/81f74279eb8950250abdbdd2c30bd30f3176ad03/.mcp.incident.json — Vercel лише для команди й проєкту `therapy-scheduling`; Supabase — `project_ref=hudgoucpezodnvirccok` (staging) з `read_only=true`; без токенів
+- MCP-конфіг: Supabase MCP у розборі дрілу не підключали. Сервер був у конфігу, але не авторизований (`needs-auth`) і для розбору не знадобився — див. шапку стенограми. Агент працював через MCP Vercel. Файли, без токенів:
+  - https://github.com/maryan-qc/therapy-scheduling/blob/81f74279eb8950250abdbdd2c30bd30f3176ad03/.mcp.json — постійний конфіг: Supabase з `read_only=true`, ref — зі змінної середовища;
+  - https://github.com/maryan-qc/therapy-scheduling/blob/81f74279eb8950250abdbdd2c30bd30f3176ad03/.mcp.incident.json — конфіг профілю розбору: Vercel лише для команди й проєкту `therapy-scheduling`; Supabase — лише staging (`project_ref=hudgoucpezodnvirccok`) з `read_only=true`.
 - Стенограма розбору: https://github.com/maryan-qc/therapy-scheduling/blob/81f74279eb8950250abdbdd2c30bd30f3176ad03/docs/incidents/2026-11-25-staging-login-500-rca.md — дослівно, 4 частини. Шапка: дата, Claude Code 2.1.332, модель `claude-opus-5-5`, режим `plan`, що агент міг і чого не міг.
 - Виправлення людиною, не агентом: https://github.com/maryan-qc/therapy-scheduling/pull/70
 - Postmortem: https://github.com/maryan-qc/therapy-scheduling/blob/81f74279eb8950250abdbdd2c30bd30f3176ad03/docs/incidents/2026-11-25-staging-login-500.md
