@@ -41,7 +41,7 @@
 - Доступ PM до staging: спільне посилання Vercel (Shareable Link) на адресу гілки staging, надіслано в чат команди — https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/docs/runbook.md#де-що
 - Реліз `v1.0.0`: https://github.com/rhutsul/leave-portal/releases/tag/v1.0.0 (нотатки від `ws9-base`, категорії з `.github/release.yml`; перед ним — кандидат https://github.com/rhutsul/leave-portal/releases/tag/v1.0.0-rc.1 на тому самому коміті)
 - Нотатки за категоріями: https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/.github/release.yml
-- Прод на тегу: SHA тегу v1.0.0 = `"sha"` у /api/health = 62de93ce7206b5ca877b69c473f30609c2cb8e8f
+- Прод на тегу: SHA тегу v1.0.0 = `"sha"` у /api/health = 62de93ce7206b5ca877b69c473f30609c2cb8e8f (на момент приймання PM). Після нього — реліз `v1.1.0` https://github.com/rhutsul/leave-portal/releases/tag/v1.1.0 (зріз 08, кроки 3–4: правка запису до рішення, AC-BEHALF-06…10; документи за розбором PM; дрібниці вигляду; окремо PM не приймав, CI й e2e зелені) — прод зараз = SHA тегу v1.1.0 = e8a15ef38ea0ddf1463adaf5f5995cc781e1e32b
 - Приймання PM перед тегом: https://github.com/rhutsul/leave-portal/issues/142#issuecomment-7220944479 (2026-11-27, staging, сценарій demo day — прийнято); тег поставлено після нього
 
 ### Сигнали (трек B)
