@@ -85,7 +85,7 @@
 
 - Варіант: резервна копія і відновлення
 - Workflow: https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/.github/workflows/backup.yml — дії за SHA
-- Прогін: https://github.com/rhutsul/leave-portal/actions/runs/45806227645 (ручний 26.11, з тренуванням відновлення; дамп даних застосунку — схеми public і private)
+- Прогін: https://github.com/rhutsul/leave-portal/actions/runs/45806227645 (ручний 26.11, з тренуванням відновлення; дамп даних застосунку — схеми public і private); за розкладом — https://github.com/rhutsul/leave-portal/actions/runs/45595071129 (25.11)
 - Резервна копія: шифрування й строк зберігання: gpg AES256 з `BACKUP_PASSPHRASE` (секрет environment production), в артефакт іде лише `*.gpg`, відкриті файли видаляються; артефакт живе 7 днів; дамп у відкритому вигляді — ніде
 - Резервна копія: тренування відновлення: job `restore-drill` у тому самому прогоні — відновлення в одноразову базу раннера, «Кількість рядків збігається в усіх таблицях»; розділ «Відновлення» — https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/docs/runbook.md#9-відновлення-бонус-зашифрована-копія-бази
 - Асистент чергового: чернетка розбору: —
