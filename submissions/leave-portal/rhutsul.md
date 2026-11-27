@@ -39,10 +39,10 @@
 - Зелений smoke на деплой staging: https://github.com/rhutsul/leave-portal/actions/runs/45964952260 — 62de93c, `"appEnv":"staging"`, `"supabaseRef":"tgvhqyboeeusptbjskio"`
 - Smoke на деплой одного PR-preview: https://github.com/rhutsul/leave-portal/actions/runs/44755494478 — гілка `chore/deps-nov`, `"supabaseRef":"tgvhqyboeeusptbjskio"` (staging), `"appEnv":null`
 - Доступ PM до staging: спільне посилання Vercel (Shareable Link) на адресу гілки staging, надіслано в чат команди — https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/docs/runbook.md#де-що
-- Реліз `v1.0.0`: зараз кандидат `v1.0.0-rc.1` — https://github.com/rhutsul/leave-portal/releases/tag/v1.0.0-rc.1 (нотатки від `ws9-base`); `v1.0.0` ставлю на той самий коміт (або з виправленнями) після приймання PM і оновлюю тут
+- Реліз `v1.0.0`: https://github.com/rhutsul/leave-portal/releases/tag/v1.0.0 (нотатки від `ws9-base`, категорії з `.github/release.yml`; перед ним — кандидат https://github.com/rhutsul/leave-portal/releases/tag/v1.0.0-rc.1 на тому самому коміті)
 - Нотатки за категоріями: https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/.github/release.yml
-- Прод на тегу: SHA тегу v1.0.0-rc.1 = `"sha"` у /api/health = 62de93ce7206b5ca877b69c473f30609c2cb8e8f
-- Приймання PM перед тегом: кандидат (staging = 62de93c) передано PM 27.11, сценарій і приймання — коментарем у https://github.com/rhutsul/leave-portal/issues/142; тег `v1.0.0` — лише після «прийнято»
+- Прод на тегу: SHA тегу v1.0.0 = `"sha"` у /api/health = 62de93ce7206b5ca877b69c473f30609c2cb8e8f
+- Приймання PM перед тегом: https://github.com/rhutsul/leave-portal/issues/142#issuecomment-7220944479 (2026-11-27, staging, сценарій demo day — прийнято); тег поставлено після нього
 
 ### Сигнали (трек B)
 
