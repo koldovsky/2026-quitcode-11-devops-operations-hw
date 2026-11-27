@@ -68,7 +68,7 @@
 - Postmortem: https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/docs/incidents/2026-11-20-staging-bad-supabase-url.md
 - Runbook: https://github.com/rhutsul/leave-portal/blob/62de93ce7206b5ca877b69c473f30609c2cb8e8f/docs/runbook.md
 - Дія з postmortem → перевірка: https://github.com/rhutsul/leave-portal/pull/116 — `/api/health` називає змінну, що веде не туди (лише назву), smoke і алерт її друкують; CI https://github.com/rhutsul/leave-portal/actions/runs/45924946039
-- Розбір PM: не надходило (на 27.11); запит — у https://github.com/rhutsul/leave-portal/pull/115
+- Розбір PM: https://github.com/rhutsul/leave-portal/pull/115#issuecomment-7220229635 (2026-11-27); 5 зауважень враховано — https://github.com/rhutsul/leave-portal/pull/146, відповідь — https://github.com/rhutsul/leave-portal/pull/115#issuecomment-7220555762
 
 ### Ланцюг постачання (трек D)
 
