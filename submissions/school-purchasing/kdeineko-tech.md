@@ -41,7 +41,7 @@
 - Реліз `v1.0.0`: https://github.com/kdeineko-tech/school-purchasing/releases/tag/v1.0.0
 - Нотатки за категоріями: https://github.com/kdeineko-tech/school-purchasing/blob/57621aa52cb1db9b5aae4d0d2c241035806c3269/.github/release.yml (PR #97)
 - Прод на тегу: тег `v1.0.0` → коміт `57621aa52cb1db9b5aae4d0d2c241035806c3269` = `"sha"` у https://school-purchasing-lemon.vercel.app/api/health (`"env":"production"`, `"db":"ok"`)
-- Приймання PM перед тегом: приймання PM не отримано: запит 2026-11-27, повідомлення в чаті команди з адресою staging (посилання немає: запит надіслано в приватний Telegram-чат команди; тег поставлено без підпису PM)
+- Приймання PM перед тегом: приймання PM не отримано: запит 2026-11-27 (адреса staging після треку A) і 2026-11-28 (повідомлення «реліз-кандидат на staging» з комітом `57621aa` = тег `v1.0.0`); обидва — у приватному Telegram-чаті команди, тому посилання немає. Тег поставлено без підпису PM; `staging` лишається на `57621aa`, доки PM не прийме реліз
 
 ### Сигнали (трек B)
 
